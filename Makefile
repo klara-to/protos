@@ -1,6 +1,5 @@
 protodir    = klara
-protogendir = .gen
-protogendirgo = $(protogendir)/go/klarapb
+protogendirgo = go/klarapb
 
 protos  := $(shell find $(protodir) -type f -name '*.proto')
 
@@ -10,7 +9,7 @@ githubrepo = github.com/klara-to/protos
 
 all: protoc
 
-$(protogendir): $(protogendirgo)
+protogendir: $(protogendirgo)
 
 $(protogendirgo):
 	if [ ! -d $(protogendirgo) ] ; then mkdir -p $(protogendirgo); fi
@@ -30,10 +29,10 @@ lint\:fix:
 
 protoc: protoc-go
 
-protoc-go: $(protos) $(protogendir) protoc-gen-go protoc-gen-go-grpc
+protoc-go: $(protos) protogendir protoc-gen-go protoc-gen-go-grpc
 	protoc \
-		--go_out=$(protogendir)/go --go_opt=module=$(githubrepo)/$(protogendir)/go \
-		--go-grpc_out=$(protogendir)/go --go-grpc_opt=module=$(githubrepo)/$(protogendir)/go \
+		--go_out=go --go_opt=module=$(githubrepo)/go \
+		--go-grpc_out=go --go-grpc_opt=module=$(githubrepo)/go \
 		$(protos)
 
 protoc-gen-go:

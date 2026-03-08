@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package klara.mx.v1;
 
-option go_package = "github.com/klara-to/protos/.gen/go/klarapb;klarapb";
+option go_package = "github.com/klara-to/protos/go/klarapb;klarapb";
 
 service Mail {
 	rpc Send(MailSendRequest) returns (MailSendResponse);

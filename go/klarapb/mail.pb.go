@@ -384,7 +384,7 @@ const file_klara_mx_v1_mail_proto_rawDesc = "" +
 	"\x11mail_type_inbound\x10\x01\x12\x16\n" +
 	"\x12mail_type_outbound\x10\x022K\n" +
 	"\x04Mail\x12C\n" +
-	"\x04Send\x12\x1c.klara.mx.v1.MailSendRequest\x1a\x1d.klara.mx.v1.MailSendResponseB4Z2github.com/klara-to/protos/.gen/go/klarapb;klarapbb\x06proto3"
+	"\x04Send\x12\x1c.klara.mx.v1.MailSendRequest\x1a\x1d.klara.mx.v1.MailSendResponseB/Z-github.com/klara-to/protos/go/klarapb;klarapbb\x06proto3"
 
 var (
 	file_klara_mx_v1_mail_proto_rawDescOnce sync.Once
