@@ -1,7 +1,7 @@
-protodir    = klara
+protodir = klara
 protogendirgo = go/klarapb
 
-protos  := $(shell find $(protodir) -type f -name '*.proto')
+protos := $(shell find $(protodir) -type f -name '*.proto')
 
 githubrepo = github.com/klara-to/protos
 
